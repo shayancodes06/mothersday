@@ -97,7 +97,7 @@ function closeModal() {
             const whiteBox = document.querySelector('.content-box-design');
             
             // 1. Change to the big pink heart background
-            mainContainer.style.backgroundImage = "url('bg_final.jpg')";
+            mainContainer.style.backgroundImage = "url('bg_final.jpeg')";
             mainContainer.style.backgroundSize = "cover";
             
             // 2. Make the white box disappear so the final photo sits directly on the wallpaper
