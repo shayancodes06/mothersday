@@ -16,7 +16,7 @@ body, html {
     align-items: center;
     
     /* THE NEW MAIN BACKGROUND (Small Hearts) */
-    background-image: url('bg_main.jpg');
+    background-image: url('bg_main.jpeg');
     background-size: 350px; /* Keeps the hearts at a cute size */
     background-repeat: repeat;
     transition: background-image 1s ease-in-out; /* Smooth fade when it changes */
