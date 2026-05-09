@@ -81,6 +81,7 @@ function popBalloon(element) {
 }
 
 // Function to close the modal and check if we should go to the final screen
+// Function to close the modal and check if we should go to the final screen
 function closeModal() {
     document.getElementById('memory-modal').classList.add('hidden');
     
@@ -90,6 +91,19 @@ function closeModal() {
     if (currentStep >= 5) {
         setTimeout(() => {
             nextScreen('screen-3', 'screen-4');
+            
+            // --- NEW CODE: SWAP THE BACKGROUND FOR THE LAST PAGE ---
+            const mainContainer = document.querySelector('.heart-background-container');
+            const whiteBox = document.querySelector('.content-box-design');
+            
+            // 1. Change to the big pink heart background
+            mainContainer.style.backgroundImage = "url('bg_final.jpg')";
+            mainContainer.style.backgroundSize = "cover";
+            
+            // 2. Make the white box disappear so the final photo sits directly on the wallpaper
+            whiteBox.style.background = "transparent";
+            whiteBox.style.boxShadow = "none";
+            
         }, 500);
     }
 }
