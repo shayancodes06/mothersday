@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&display=swap');
+
+body, html {
+    margin: 0; padding: 0;
+    height: 100vh; width: 100vw;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fff0f5; /* Light pink background */
+    overflow: hidden;
+    color: #4a4a4a;
+}
+
+.screen {
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1 {
+    color: #e84393;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.bday-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #d63031;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.btn {
+    background: #ff7675;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 4px 10px rgba(255, 118, 117, 0.4);
+    transition: transform 0.2s;
+    margin-top: 15px;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+/* Loading Text Animations */
+.load-text {
+    font-size: 1.3rem;
+    color: #d63031;
+    margin: 10px 0;
+    font-weight: 500;
+    transition: opacity 0.5s ease;
+}
+.hidden-text { opacity: 0; }
+
+/* Balloon Room */
+.balloon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.balloon {
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.balloon:hover { transform: scale(1.2); }
+
+/* The Pop Animation */
+.pop-anim {
+    animation: popEffect 0.3s forwards;
+    pointer-events: none;
+}
+
+@keyframes popEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-15px); }
+}
+
+/* Modal Popup */
+#memory-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(255, 240, 245, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    transition: opacity 0.3s;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#memory-text {
+    font-size: 1.3rem;
+    color: #e84393;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+/* Final Screen */
+.final-screen { background-color: #ffeaa7; }
+.final-photo { width: 300px; height: 300px; }
+.final-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2rem;
+    color: #e17055;
+    line-height: 1.4;
+    margin-top: 20px;
+}

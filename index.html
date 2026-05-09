@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Mommy!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SCREEN 1: First First -->
+    <div id="screen-1" class="screen">
+        <h1>A suprise made for youu by samuuu 🌺</h1>
+        <!-- Add a solo picture of her here -->
+        <img src="mom_solo.jpg" alt="Mom" class="photo">
+        <button class="btn" onclick="nextScreen('screen-1', 'screen-2')">Open 💖</button>
+    </div>
+
+    <!-- SCREEN 2: Loading Cover Page -->
+    <div id="screen-2" class="screen hidden">
+        <h1 class="bday-title">happy birthdayyy mommmyy!</h1>
+        
+        <div id="loading-texts">
+            <p class="load-text hidden-text">Loading memories...</p>
+            <p class="load-text hidden-text">Loading love...</p>
+            <p class="load-text hidden-text">Loading chaos...</p>
+            <p class="load-text hidden-text">Loading best mom...</p>
+        </div>
+
+        <!-- Add a picture of you both here -->
+        <img id="us-pic" src="us_pic.jpg" alt="Us" class="photo hidden-text">
+        <button id="continue-btn" class="btn hidden-text" onclick="nextScreen('screen-2', 'screen-3')">Tap to continuee🌸</button>
+    </div>
+
+    <!-- SCREEN 3: The Balloon Room -->
+    <div id="screen-3" class="screen hidden">
+        <h2>Click anything to discover surprises 💖</h2>
+        <div class="balloon-container">
+            <div class="balloon" onclick="popBalloon(this)">🎈</div>
+            <div class="balloon" onclick="popBalloon(this)">🎈</div>
+            <div class="balloon" onclick="popBalloon(this)">🎈</div>
+            <div class="balloon" onclick="popBalloon(this)">🎈</div>
+            <div class="balloon" onclick="popBalloon(this)">🎈</div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL for the balloon memories -->
+    <div id="memory-modal" class="hidden">
+        <div class="modal-content">
+            <img id="memory-img" src="" alt="Memory" class="photo">
+            <p id="memory-text">Memory text</p>
+            <button id="modal-btn" class="btn" onclick="closeModal()">Pop another baloon</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 4: Final Screen -->
+    <div id="screen-4" class="screen hidden final-screen">
+        <!-- Add your absolute favorite picture together here -->
+        <img src="fav_pic.jpg" alt="Favorite Pic" class="photo final-photo">
+        <p class="final-text">
+            Thank you for being<br>
+            my safe place,<br>
+            my comfort person,<br>
+            and the best mommy ever 💗
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
